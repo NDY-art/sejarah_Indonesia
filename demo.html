@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Nur Dwi Yanti, M.Pd."><meta name="copyright" content="© 2026 Nur Dwi Yanti, M.Pd. Seluruh hak dilindungi."><meta name="rights" content="All Rights Reserved"><title>Demo • Jelajah Sejarah Indonesia — MPI Kelas VI</title><style>:root{--primary:#CE1126;--primary-dark:#A30D1D;--secondary:#F4EEDD;--tertiary:#D4C3A3;--text-dark:#3E2723;--text-light:#FFFFFF;--success:#2E7D32;--warning:#F57C00;--bg-body:#FAFAFA;--card-bg:#FFFFFF}*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background-color:var(--bg-body);color:var(--text-dark);line-height:1.6;overflow-x:hidden}.app-frame{max-width:1200px;margin:0 auto;background:var(--card-bg);min-height:100vh;display:flex;flex-direction:column;box-shadow:0 0 20px rgba(0,0,0,0.1);position:relative}header{background-color:var(--primary);color:var(--text-light);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;flex-wrap:wrap;gap:10px}.header-title{font-size:1.1rem;font-weight:bold}.header-subtitle{font-size:0.8rem;opacity:0.9}.progress-box{width:120px;background:rgba(255,255,255,0.3);border-radius:8px;height:8px;overflow:hidden;margin-top:4px}.progress-fill{height:100%;background:#FFD700;width:0%;transition:width 0.4s ease}main{flex:1;padding:0;padding-bottom:30px}.page{display:none !important}.page.active{display:block !important;animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}h1,h2,h3{color:var(--primary);margin-bottom:12px}p{margin-bottom:12px;font-size:1rem}.btn{display:inline-block;background-color:var(--primary);color:var(--text-light);padding:10px 20px;border:none;border-radius:8px;font-size:1rem;cursor:pointer;font-weight:bold;text-align:center;text-decoration:none;margin:5px;transition:0.2s}.btn:hover{background-color:var(--primary-dark);transform:scale(1.02)}.btn-secondary{background-color:var(--tertiary);color:var(--text-dark)}.btn-success{background-color:var(--success)}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:15px}.card{background:var(--secondary);border:2px solid var(--tertiary);border-radius:10px;padding:15px;margin-bottom:15px}.floating-garuda{position:fixed;bottom:20px;left:70px;width:260px;height:260px;z-index:1500;cursor:grab;user-select:none;touch-action:none;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.5));animation:floatMascot 3s ease-in-out infinite}.floating-garuda:active{cursor:grabbing}.floating-garuda img{width:100%;height:100%;object-fit:contain;pointer-events:none;background:transparent}@keyframes floatMascot{0%,100%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-10px) rotate(2deg)}}#page-opening.active{display:flex !important;flex-direction:column;justify-content:flex-start;align-items:center;background:#000;min-height:calc(100vh - 60px);padding:20px;padding-top:25px;text-align:center}#page-welcome.active{display:flex !important;flex-direction:column;justify-content:flex-end;align-items:center;background-image:url('backgrounddepan.png');background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:calc(100vh - 60px);padding:40px 20px 80px 20px;text-align:center}#page-welcome::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.55);z-index:1}#page-welcome > *{position:relative;z-index:2}#page-welcome h1{color:#FFD700;text-shadow:0 2px 4px rgba(0,0,0,0.8);font-size:2.2rem}#page-welcome p{color:#FFFFFF;text-shadow:0 1px 3px rgba(0,0,0,0.8)}#page-beranda.active{min-height:calc(100vh - 60px);padding:24px 16px 60px;background:linear-gradient(rgba(39,18,12,0.66),rgba(39,18,12,0.8)),url('beranda_4.png') center/cover no-repeat fixed}.beranda-inner-padding{padding:4px 12px 18px;text-align:center}.beranda-inner-padding h2{color:#FFD76A;font-size:clamp(1.45rem,4vw,2rem);text-transform:uppercase;letter-spacing:1px;text-shadow:0 2px 5px rgba(0,0,0,0.9),0 0 12px rgba(255,215,0,0.5)}.beranda-inner-padding p{color:#fff8df;margin:-6px 0 0;font-size:clamp(0.78rem,2vw,0.95rem);text-shadow:0 1px 3px rgba(0,0,0,0.9)}.history-menu-frame{position:relative;width:100%;max-width:800px;margin:0 auto;padding:28px 16px 20px;border:3px solid #D4AF37;border-radius:18px;background:rgba(42,24,15,0.9);outline:1px solid rgba(255,236,166,0.9);outline-offset:-7px;box-shadow:0 12px 32px rgba(0,0,0,0.55),0 0 20px rgba(212,175,55,0.25);backdrop-filter:blur(6px)}.history-menu-ornament{position:absolute;top:-14px;left:50%;transform:translateX(-50%);min-width:145px;padding:4px 14px;border:2px solid #fff4c4;border-radius:10px;background:linear-gradient(135deg,#FFF0A6,#D4AF37,#9A6B16);color:#29160b;font-size:0.78rem;font-weight:900;text-align:center;letter-spacing:0.7px;box-shadow:0 4px 10px rgba(0,0,0,0.45)}.history-menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 10px;align-items:start;justify-items:center}.history-menu-item{width:100%;max-width:150px;display:flex;flex-direction:column;align-items:center;gap:7px;padding:5px 3px;border:0;background:transparent;color:#fff;cursor:pointer;touch-action:manipulation;transition:transform 0.22s ease,filter 0.22s ease}.history-menu-item:hover,.history-menu-item:focus-visible{transform:translateY(-4px) scale(1.035);filter:brightness(1.12);outline:none}.history-menu-item:focus-visible .history-menu-icon{box-shadow:0 0 0 4px #fff,0 0 0 7px #FFD700,0 8px 18px rgba(0,0,0,0.45)}.history-menu-icon{width:clamp(68px,14vw,94px);height:clamp(68px,14vw,94px);display:grid;place-items:center;border:0;border-radius:50%;background:transparent;filter:drop-shadow(0 8px 10px rgba(0,0,0,0.5));transition:filter 0.22s ease,transform 0.22s ease}.history-menu-icon img{width:100%;height:100%;display:block;object-fit:contain;pointer-events:none;user-select:none}.history-menu-item:hover .history-menu-icon,.history-menu-item:focus-visible .history-menu-icon{filter:drop-shadow(0 0 10px rgba(255,215,0,0.9)) drop-shadow(0 8px 10px rgba(0,0,0,0.5));transform:scale(1.04)}.history-menu-label{color:#fff;font-size:clamp(0.66rem,1.7vw,0.82rem);font-weight:900;line-height:1.15;letter-spacing:0.35px;text-align:center;text-transform:uppercase;text-shadow:0 2px 4px rgba(0,0,0,0.95)}@media (max-width:480px){#page-beranda.active{padding:20px 8px 52px;background-attachment:scroll}.history-menu-frame{padding:25px 8px 16px;border-radius:14px}.history-menu-grid{gap:14px 4px}.history-menu-icon{width:72px;height:72px}.history-menu-label{font-size:0.61rem}}#page-map-video.active{min-height:calc(100vh - 60px);display:flex !important;align-items:center;justify-content:center;padding:24px 16px 50px;background:linear-gradient(145deg,#23110c,#4d2418 52%,#1a0d09)}.map-video-gate{width:100%;max-width:820px;padding:22px;border:3px solid #d4af37;border-radius:16px;background:rgba(255,253,245,0.98);box-shadow:0 14px 35px rgba(0,0,0,0.55),0 0 22px rgba(212,175,55,0.25);text-align:center}.map-video-gate h2{margin-bottom:5px}.map-video-gate > p{color:#5d4037;font-size:0.92rem}.map-learning-video-frame{width:100%;max-width:720px;margin:14px auto 10px;overflow:hidden;border:4px solid #3e2723;border-radius:12px;background:#000;box-shadow:0 8px 20px rgba(0,0,0,0.35)}#map-learning-video{display:block;width:100%;max-height:68vh;background:#000}.map-video-progress{width:100%;height:9px;overflow:hidden;border-radius:999px;background:#d7cbb5;margin:10px auto 6px}#map-video-progress-fill{width:0%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#ce1126,#ffd700);transition:width 0.2s linear}#map-video-status{min-height:26px;margin:7px 0;color:#3e2723;font-size:0.9rem;font-weight:800}@media (max-width:560px){#page-map-video.active{padding:14px 8px 38px;align-items:flex-start}.map-video-gate{padding:14px 10px}}#page-arcade.active{display:flex !important;flex-direction:column;background-image:url('backgroundarcade.png');background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;min-height:calc(100vh - 60px);padding:20px}#page-arcade::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.65);z-index:1}#page-arcade > *{position:relative;z-index:2}#page-arcade h2{color:#FFD700;text-shadow:0 2px 4px rgba(0,0,0,0.8)}.map-container{position:relative;width:100%;max-width:900px;margin:0 auto 20px auto;border-radius:12px;overflow:hidden;border:3px solid var(--tertiary);box-shadow:0 4px 15px rgba(0,0,0,0.25);background:#000}.map-container img{width:100%;height:auto;display:block}.map-hotspot{position:absolute;width:clamp(30px,4.5vw,44px);height:clamp(30px,4.5vw,44px);background:linear-gradient(135deg,#FFD700,#CE1126);border:2.5px solid #FFFFFF;border-radius:50%;color:white;display:flex;justify-content:center;align-items:center;font-weight:900;font-size:clamp(0.75rem,1.3vw,1.1rem);cursor:pointer;transform:translate(-50%,-50%);box-shadow:0 4px 12px rgba(0,0,0,0.6);animation:mapPulse 2s infinite;transition:all 0.25s ease;z-index:10}.map-hotspot:hover{transform:translate(-50%,-50%) scale(1.2);background:linear-gradient(135deg,#FFF,#FFD700);color:var(--primary);box-shadow:0 0 16px #FFD700}@keyframes mapPulse{0%{box-shadow:0 0 0 0 rgba(255,215,0,0.8)}70%{box-shadow:0 0 0 10px rgba(255,215,0,0)}100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}}.interactive-scene-container{position:relative;width:100%;max-width:950px;margin:0 auto;border-radius:12px;overflow:hidden;border:3px solid var(--tertiary);box-shadow:0 4px 15px rgba(0,0,0,0.2);background:#2a2a2a;min-height:400px;display:flex;align-items:center;justify-content:center}.interactive-scene-container img{width:100%;height:auto;display:block}.scene-hotspot{position:absolute;cursor:pointer;transition:0.2s;animation:pulse 2s infinite;border-radius:50%;border:3px dashed #FFD700;background:rgba(255,215,0,0.2)}.scene-hotspot:hover{background:rgba(255,215,0,0.5);transform:translate(-50%,-50%) scale(1.08)}.zone-quiz-shell{width:100%;max-width:950px;margin:22px auto 0;padding:18px;border:3px solid var(--tertiary);border-radius:14px;background:linear-gradient(145deg,#fffdf5,#f4eedd);box-shadow:0 8px 22px rgba(62,39,35,0.16)}.zone-quiz-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px;flex-wrap:wrap}.zone-quiz-header h3{margin-bottom:3px}.zone-quiz-header p{margin:0;font-size:0.9rem;color:#5d4037}.zone-score-badge{padding:5px 10px;border-radius:999px;background:#fff;border:2px solid var(--tertiary);color:var(--primary-dark);font-size:0.8rem;font-weight:800;white-space:nowrap}.zone-question{margin-bottom:12px;padding:14px;border:2px solid #dfd2b8;border-radius:10px;background:#fff;transition:border-color 0.2s ease,background 0.2s ease}.zone-question.is-correct{border-color:#43a047;background:#f1fff3}.zone-question.is-wrong{border-color:#e53935;background:#fff4f3}.zone-question-title{margin-bottom:9px;font-weight:800;color:#3e2723}.zone-question-type{display:inline-block;margin-right:6px;padding:2px 7px;border-radius:999px;background:#6d4c41;color:#fff;font-size:0.7rem;font-weight:800;vertical-align:1px}.zone-option{display:block;margin:6px 0;padding:7px 9px;border-radius:7px;background:#faf7ef;cursor:pointer}.zone-option:hover{background:#f2ead8}.zone-option input{margin-right:7px;accent-color:var(--primary)}.zone-match-row,.zone-order-row{display:grid;grid-template-columns:minmax(120px,1fr) minmax(150px,1fr);align-items:center;gap:10px;margin:8px 0}.zone-match-row select,.zone-order-row select{width:100%;padding:8px;border:2px solid var(--tertiary);border-radius:7px;background:#fff;color:var(--text-dark)}.zone-answer-feedback{min-height:24px;margin-top:8px;font-size:0.88rem;font-weight:700}.zone-quiz-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.zone-quiz-result{display:none;margin:14px 0 4px;padding:12px;border-radius:10px;background:#3e2723;color:#fff;text-align:center;font-weight:800}@media (max-width:560px){.zone-quiz-shell{padding:12px}.zone-question{padding:11px}.zone-match-row,.zone-order-row{grid-template-columns:1fr;gap:4px}}.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:2000;justify-content:center;align-items:center;padding:20px}.modal-content{background:white;padding:25px;border-radius:12px;max-width:550px;width:100%;text-align:center;max-height:90vh;overflow-y:auto;border:3px solid var(--tertiary)}.arcade-menu{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}.puzzle-piece,.hero-chip{background:white;border:2.5px dashed var(--primary);padding:8px 12px;border-radius:8px;cursor:pointer;display:inline-block;margin:4px;font-weight:bold;user-select:none;font-size:0.9rem}.puzzle-dropzone{min-height:50px;background:#fff;border:2px solid var(--tertiary);border-radius:8px;padding:10px;margin:10px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}#jigsaw-board{display:grid;grid-template-columns:repeat(3,100px);grid-template-rows:repeat(3,100px);gap:2px;background:#3E2723;padding:4px;border-radius:8px;margin:15px auto;width:max-content;touch-action:none}.jigsaw-cell{width:100px;height:100px;background:#fff;border:1px solid #D4C3A3;cursor:pointer;position:relative}.jigsaw-cell canvas{display:block;width:100px;height:100px}.jigsaw-cell.selected{border:3px solid #FFD700;box-shadow:0 0 10px #FFD700;z-index:2}.standard-page-pad{padding:20px}.leaderboard-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:0.9rem}.leaderboard-table th,.leaderboard-table td{border:1px solid var(--tertiary);padding:8px;text-align:center}.leaderboard-table th{background-color:var(--primary);color:white}.leaderboard-table tr:nth-child(even){background-color:var(--secondary)}#certificate-box{max-width:920px;margin:18px auto 0;padding:34px 28px;border:8px double var(--primary);background:radial-gradient(circle at top left,rgba(255,213,79,.2),transparent 32%),radial-gradient(circle at bottom right,rgba(0,229,255,.13),transparent 34%),#fffcf0}.certificate-kicker{margin:0 0 6px;color:#7b1d2b;font-size:.82rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}.certificate-name{display:inline-block;min-width:260px;margin:5px 0 14px;padding:4px 20px 7px;border-bottom:2px solid var(--primary);color:#6c1322;font-size:1.55rem}.certificate-achievement-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}.certificate-achievement-item{padding:12px 8px;border:1px solid rgba(11,79,134,.3);border-radius:10px;background:rgba(255,255,255,.72)}.certificate-achievement-item span{display:block;margin-bottom:5px;color:#62554b;font-size:.76rem}.certificate-achievement-item strong{color:#083257;font-size:1.05rem}.certificate-status{margin:14px auto 8px;color:#3e2723;font-weight:700}.certificate-date{margin-top:20px;font-size:.84rem;color:#665b55}.score-progress-track{height:13px;margin:7px 0 12px;overflow:hidden;border:1px solid rgba(0,229,255,.5);border-radius:999px;background:#dce8ec}.score-progress-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,#0b4f86,#00c896,#ffd54f);box-shadow:0 0 10px rgba(0,229,255,.55)}.wa-share-panel{margin:12px 0 14px;padding:13px;border:1px solid rgba(0,168,132,.4);border-radius:12px;background:linear-gradient(135deg,#effff8,#eefaff);text-align:left}.wa-share-panel label{display:block;margin-bottom:6px;color:#075e54;font-size:.88rem;font-weight:800}.wa-share-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:stretch}.wa-share-row input{min-width:0;padding:10px 11px;border:1.5px solid #25d366;border-radius:9px;background:#fff;color:#17332c;font:inherit}.wa-share-row input:focus{outline:3px solid rgba(37,211,102,.22);outline-offset:1px}.wa-share-note{display:block;margin-top:7px;color:#53645f;font-size:.74rem;line-height:1.45}:root{--future-navy:#06182d;--future-blue:#0b4f86;--future-cyan:#00e5ff;--future-violet:#8b5cf6;--future-gold:#ffd54f;--future-green:#00c896}.btn{position:relative;isolation:isolate;overflow:hidden;min-height:38px;border:1.5px solid var(--future-cyan);border-radius:10px;background-color:var(--future-navy);background-image:linear-gradient(135deg,#071a32 0%,#0b4f86 58%,#06324f 100%);color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.08) inset,0 0 12px rgba(0,229,255,.34),0 6px 14px rgba(2,16,35,.24);text-shadow:0 0 7px rgba(0,229,255,.72);letter-spacing:.35px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,filter .2s ease}.btn::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,transparent 18%,rgba(255,255,255,.32) 48%,transparent 75%);transform:translateX(-135%) skewX(-18deg);transition:transform .48s ease}.btn:hover{background-color:var(--future-navy);filter:brightness(1.12);border-color:#d9fbff;transform:translateY(-2px) scale(1.025);box-shadow:0 0 0 1px rgba(255,255,255,.14) inset,0 0 19px rgba(0,229,255,.62),0 9px 18px rgba(2,16,35,.28)}.btn:hover::before{transform:translateX(135%) skewX(-18deg)}.btn:active{transform:translateY(0) scale(.98)}.btn:focus-visible{outline:3px solid rgba(255,213,79,.94);outline-offset:3px}.btn-secondary{background-color:#351d70;background-image:linear-gradient(135deg,#161d4a 0%,#6639a6 57%,#213b82 100%);border-color:#c4a7ff;color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.09) inset,0 0 13px rgba(139,92,246,.46),0 6px 14px rgba(2,16,35,.23);text-shadow:0 0 7px rgba(196,167,255,.72)}.btn-success{background-color:#075e50;background-image:linear-gradient(135deg,#063a38 0%,#008b72 58%,#087c9b 100%);border-color:#5dffe0;color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.09) inset,0 0 13px rgba(0,200,150,.46),0 6px 14px rgba(2,16,35,.23);text-shadow:0 0 7px rgba(93,255,224,.7)}header .btn{min-height:32px;border-radius:8px;box-shadow:0 0 9px rgba(0,229,255,.3),0 3px 8px rgba(0,0,0,.2)}.history-menu-label{padding:4px 9px;border:1px solid rgba(0,229,255,.58);border-radius:999px;background:linear-gradient(90deg,rgba(4,24,46,.9),rgba(11,79,134,.82));color:#fff;box-shadow:0 0 9px rgba(0,229,255,.28);text-shadow:0 0 6px rgba(0,229,255,.68)}.history-menu-item:hover .history-menu-label,.history-menu-item:focus-visible .history-menu-label{border-color:var(--future-gold);box-shadow:0 0 15px rgba(255,213,79,.5)}.map-hotspot{border:2px solid var(--future-cyan);background-color:var(--future-navy);background-image:radial-gradient(circle at 32% 25%,#e5fdff 0 6%,#0c76a8 25%,#083257 56%,#041321 100%);color:#fff;box-shadow:0 0 0 3px rgba(0,229,255,.14),0 0 16px rgba(0,229,255,.76),0 5px 12px rgba(0,0,0,.34);text-shadow:0 0 6px #00162e;animation:futureMapPulse 1.85s ease-in-out infinite}.map-hotspot:hover,.map-hotspot:focus-visible{border-color:#fff4b0;background-image:radial-gradient(circle at 32% 25%,#fffbe1 0 7%,#ffbf2f 28%,#c34e16 60%,#331408 100%);box-shadow:0 0 0 4px rgba(255,213,79,.18),0 0 23px rgba(255,213,79,.9),0 7px 15px rgba(0,0,0,.38)}@keyframes futureMapPulse{0%,100%{box-shadow:0 0 0 3px rgba(0,229,255,.12),0 0 12px rgba(0,229,255,.58),0 5px 12px rgba(0,0,0,.3)}50%{box-shadow:0 0 0 7px rgba(0,229,255,.04),0 0 22px rgba(0,229,255,.9),0 7px 15px rgba(0,0,0,.36)}}.scene-hotspot{border:2px solid rgba(0,229,255,.94) !important;background:linear-gradient(135deg,rgba(4,24,46,.34),rgba(0,229,255,.12));box-shadow:0 0 0 2px rgba(255,255,255,.18) inset,0 0 14px rgba(0,229,255,.72),0 4px 10px rgba(0,0,0,.22);animation:futureScenePulse 1.75s ease-in-out infinite}.scene-hotspot:hover,.scene-hotspot:focus-visible{background:linear-gradient(135deg,rgba(255,213,79,.34),rgba(0,229,255,.24));border-color:#fff4b0 !important;box-shadow:0 0 0 3px rgba(255,213,79,.16),0 0 22px rgba(255,213,79,.78),0 5px 12px rgba(0,0,0,.28)}@keyframes futureScenePulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.25)}}.arcade-menu .btn{min-width:180px;border-radius:12px;text-transform:uppercase;font-weight:800;letter-spacing:.65px}.zone-quiz-actions .btn{min-width:168px}.puzzle-piece,.hero-chip{border:1.5px solid var(--future-cyan);border-radius:9px;background-color:var(--future-navy);background-image:linear-gradient(135deg,#081b32,#0b4f86);color:#fff;box-shadow:0 0 9px rgba(0,229,255,.32),0 4px 9px rgba(0,0,0,.18);text-shadow:0 0 6px rgba(0,229,255,.68);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}.puzzle-piece:hover,.hero-chip:hover{transform:translateY(-2px);filter:brightness(1.13);box-shadow:0 0 16px rgba(0,229,255,.62),0 7px 12px rgba(0,0,0,.2)}.puzzle-piece:focus-visible,.hero-chip:focus-visible{outline:3px solid var(--future-gold);outline-offset:2px}.zone-question-type{border:1px solid rgba(0,229,255,.68);border-radius:999px;background:linear-gradient(90deg,#071a32,#0b4f86);color:#fff;box-shadow:0 0 8px rgba(0,229,255,.28);text-shadow:0 0 5px rgba(0,229,255,.58)}.zone-match-row select,.zone-order-row select{border:1.5px solid #4ccfe3;border-radius:8px;background-color:#f4fdff;box-shadow:0 0 0 2px rgba(0,229,255,.08) inset}.zone-match-row select:focus,.zone-order-row select:focus{outline:2px solid rgba(0,229,255,.62);outline-offset:2px;box-shadow:0 0 12px rgba(0,229,255,.36)}@media (max-width:560px){.btn{padding:9px 13px;font-size:.88rem}.arcade-menu .btn,.zone-quiz-actions .btn{min-width:0;width:100%}.history-menu-label{padding:3px 7px}.certificate-achievement-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#certificate-box{padding:25px 15px}.certificate-name{min-width:0;width:90%;font-size:1.25rem}.wa-share-row{grid-template-columns:1fr}}@page{size:A4 landscape;margin:10mm}@media print{body *{visibility:hidden !important}#page-refleksi,#certificate-box,#certificate-box *{visibility:visible !important}#page-refleksi{display:block !important;position:static !important;padding:0 !important;margin:0 !important}#page-refleksi > *:not(#certificate-box){display:none !important}#certificate-box{display:block !important;width:100% !important;max-width:none !important;min-height:175mm;margin:0 !important;padding:25mm 18mm !important;border:10px double #8e1c2f !important;border-radius:0 !important;box-shadow:none !important;background:#fffcf0 !important;color:#2f221e !important;break-inside:avoid}.certificate-achievement-grid{grid-template-columns:repeat(4,1fr)}}@media (prefers-reduced-motion:reduce){.btn,.btn::before,.map-hotspot,.scene-hotspot,.puzzle-piece,.hero-chip{animation:none !important;transition:none !important}}</style><script src="konfigurasi.js"></script><script src="akses-premium.js"></script><style>
+.demo-ribbon{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 18px;background:#fff4d5;color:#633d14;border-bottom:1px solid #dcc193;font-size:13px}
+.demo-ribbon strong{display:block}.demo-actions{display:flex;gap:8px;flex-wrap:wrap}.demo-ribbon .btn{padding:7px 11px;font-size:12px;margin:0}.demo-note{max-width:950px;margin:12px auto;padding:14px;border:1px solid #dcc193;border-radius:12px;background:#fff6df;color:#533c20}.demo-lock{position:relative}.demo-lock::after{content:'PREMIUM';position:absolute;right:0;top:-6px;padding:2px 6px;border-radius:6px;background:#ffda77;color:#422600;font:700 9px Arial;z-index:12}.map-hotspot.demo-lock{animation:none;filter:saturate(.25)}.map-hotspot.demo-lock::after{top:-14px;right:-11px;font-size:7px}.demo-quick{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}.demo-quick .btn{min-height:44px}.demo-ribbon a{color:inherit;font-weight:bold} [hidden]{display:none!important}
+</style></head><body><div class="floating-garuda" id="draggable-garuda" style="display: none;" title="Geser Karakter Penjelajah Garuda"><img src="garuda.png" alt="Garuda Mascot" onerror="this.src='https://placehold.co/260x260/CE1126/FFD700?text=Garuda';"></div><div class="app-frame"><aside class="demo-ribbon"><div><strong>VERSI DEMO · GRATIS</strong>Zona 1 + 5 soal latihan. Tanpa aktivasi lisensi.</div><div class="demo-actions"><a href="index.html">Pilihan akses</a><button class="btn" onclick="MPIBukaPremium()">Aktivasi Premium ↗</button><button class="btn" data-sales-contact="" hidden="hidden" onclick="MPIHubungiPengelola()">Hubungi Pengelola</button></div></aside><header><div><div class="header-title">🇮🇩 JELAJAH SEJARAH INDONESIA</div><div class="header-subtitle" id="header-student">Penjelajah: Nur Dwi Yanti</div></div><div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;"><div style="background: rgba(0,0,0,0.2); padding: 4px 8px; border-radius: 6px; display: flex; align-items: center; gap: 5px;"><button class="btn" style="padding: 4px 8px; font-size: 0.75rem; margin: 0;" onclick="appAudio.toggleAudio()">🎵 <span id="audio-status">BGM: Off</span></button><input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" oninput="appAudio.setVolume(this.value)" style="width: 60px; cursor: pointer;" title="Volume"><button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.75rem; margin: 0;" onclick="app.toggleGaruda()">🦅 <span id="garuda-status">Garuda: On</span></button></div><div style="text-align: right;"><div style="font-size: 0.8rem;" id="progress-text">Progres: 0%</div><div class="progress-box"><div class="progress-fill" id="progress-bar"></div></div></div></div></header><main><section id="page-opening" class="page active"><div style="max-width: 700px; width: 100%; margin-bottom: 20px; border-radius: 12px; overflow: hidden; border: 3px solid #FFD700; position: relative;"><video id="opening-video" width="100%" playsinline controls style="display: block; background: #000;" src="videoopening.mp4">
+                    Browser Anda tidak mendukung pemutaran video.
+                </video></div><button class="btn" onclick="app.finishOpening()">Lewati / Lanjut Masuk 🚀</button></section><section id="page-welcome" class="page"><h1>JELAJAH SEJARAH INDONESIA</h1><p>“Menelusuri Jejak Perjuangan Menuju Indonesia Merdeka”</p><p class="demo-note">Coba Zona 1: Kedatangan Bangsa Asing ke Nusantara. Fitur lainnya tersedia pada premium.</p><div class="card" style="max-width: 400px; margin: 0 auto 20px auto; text-align: left; background: rgba(244, 238, 221, 0.95);"><label>Nama Penjelajah:</label><input type="text" id="input-nama" value="" style="width: 100%; padding: 10px; border: 2px solid var(--tertiary); border-radius: 6px;" placeholder="Tulis namamu" maxlength="60"></div><button class="btn" onclick="app.startApp()">Mulai Menjelajah 🚀</button></section><section id="page-beranda" class="page"><div class="beranda-inner-padding"><h2>Beranda Penjelajah</h2><p>Pilih ikon untuk melanjutkan petualangan sejarahmu.</p></div><div class="demo-quick"><button class="btn" onclick="app.openZone(1)">Mulai Demo Zona 1 →</button><button class="btn btn-secondary" onclick="app.openUpgrade()">Lihat Perbandingan Akses</button></div><div class="history-menu-frame"><div class="history-menu-ornament">❖ MENU UTAMA ❖</div><div class="history-menu-grid"><button type="button" class="history-menu-item" onclick="app.nav('page-profil')" aria-label="Buka Profil Pengembang"><span class="history-menu-icon" aria-hidden="true"><img src="icon1.png" alt=""></span><span class="history-menu-label">Profil</span></button><button type="button" class="history-menu-item" onclick="app.openPetunjuk()" aria-label="Buka Petunjuk Penggunaan"><span class="history-menu-icon" aria-hidden="true"><img src="icon2.png" alt=""></span><span class="history-menu-label">Petunjuk</span></button><button type="button" class="history-menu-item" onclick="app.openCPTP()" aria-label="Buka Capaian dan Tujuan Pembelajaran"><span class="history-menu-icon" aria-hidden="true"><img src="icon3.png" alt=""></span><span class="history-menu-label">CP &amp; TP</span></button><button type="button" class="history-menu-item" onclick="app.openMapJourney()" aria-label="Buka Peta Perjalanan"><span class="history-menu-icon" aria-hidden="true"><img src="icon4.png" alt=""></span><span class="history-menu-label">Peta Perjalanan</span></button><button type="button" class="history-menu-item demo-lock" onclick="app.openUpgrade()" aria-label="Fitur premium: Tantangan"><span class="history-menu-icon" aria-hidden="true"><img src="icon5.png" alt=""></span><span class="history-menu-label">Tantangan</span></button><button type="button" class="history-menu-item demo-lock" onclick="app.openUpgrade()" aria-label="Fitur premium: Evaluasi"><span class="history-menu-icon" aria-hidden="true"><img src="icon6.png" alt=""></span><span class="history-menu-label">Evaluasi</span></button><button type="button" class="history-menu-item demo-lock" onclick="app.openUpgrade()" aria-label="Fitur premium: Refleksi"><span class="history-menu-icon" aria-hidden="true"><img src="icon7.png" alt=""></span><span class="history-menu-label">Refleksi</span></button><button type="button" class="history-menu-item" onclick="app.resetAppProgress()" aria-label="Reset Progres"><span class="history-menu-icon" aria-hidden="true"><img src="icon8.png" alt=""></span><span class="history-menu-label">Reset</span></button><button type="button" class="history-menu-item" onclick="app.openSkorCapaian()" aria-label="Buka Skor Capaian"><span class="history-menu-icon" aria-hidden="true"><img src="icon9.png" alt=""></span><span class="history-menu-label">Skor</span></button></div></div></section><section id="page-map-video" class="page"><div class="map-video-gate"><h2>📺 Video Pengantar Peta Perjalanan</h2><p>Video pengantar dapat ditonton pada demo. Anda juga boleh langsung mencoba Zona 1.</p><div class="map-learning-video-frame"><video id="map-learning-video" playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noplaybackrate" src="videopembelajaran.mp4" ontimeupdate="app.updateMapVideoProgress()" onended="app.completeMapLearningVideo()" onerror="app.handleMapLearningVideoError()">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video></div><div class="map-video-progress" aria-label="Progres video"><div id="map-video-progress-fill"></div></div><div id="map-video-status" aria-live="polite">Menyiapkan video pembelajaran...</div><button id="map-video-play-fallback" class="btn btn-success" type="button" style="display:none;" onclick="app.resumeMapLearningVideo()">▶ Mulai Video</button><button class="btn btn-secondary" type="button" onclick="app.cancelMapLearningVideo()">⬅ Kembali ke Beranda</button><button class="btn" type="button" onclick="app.skipDemoVideo()">Langsung ke Peta Demo</button></div></section><section id="page-map" class="page standard-page-pad"><div style="margin-bottom: 15px;"><button class="btn btn-secondary" onclick="app.nav('page-beranda')">⬅ Kembali ke Beranda</button></div><h2>Peta Perjalanan Sejarah Indonesia</h2><p>Zona 1 dapat dicoba gratis. Ketuk zona berlabel PREMIUM untuk melihat akses lengkap.</p><div class="demo-quick"><button class="btn" onclick="app.openZone(1)">Coba Zona 1</button><button class="btn btn-secondary" onclick="app.nav('page-map-video');app.playMapLearningVideo()">Tonton Video Pengantar</button></div><div class="map-container"><img src="peta.png" alt="Peta" onerror="this.onerror=null; this.src='https://placehold.co/900x500/3E2723/FFF?text=Peta+Perjalanan+Sejarah';"><div class="map-hotspot" style="top: 33%; left: 38%;" onclick="app.openZone(1)" title="Zona 1" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">1</div><div class="map-hotspot demo-lock" style="top: 43%; left: 19%;" onclick="app.openZone(2)" title="Zona 2 — Premium" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">2</div><div class="map-hotspot demo-lock" style="top: 47%; left: 40%;" onclick="app.openZone(3)" title="Zona 3 — Premium" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">3</div><div class="map-hotspot demo-lock" style="top: 57%; left: 45%;" onclick="app.openZone(4)" title="Zona 4 — Premium" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">4</div><div class="map-hotspot demo-lock" style="top: 69%; left: 19%;" onclick="app.openZone(5)" title="Zona 5 — Premium" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">5</div><div class="map-hotspot demo-lock" style="top: 80%; left: 60%;" onclick="app.openZone(6)" title="Zona 6 — Premium" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">6</div><div class="map-hotspot demo-lock" style="top: 86%; left: 48%;" onclick="app.openZone(7)" title="Zona 7 — Premium" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">7</div></div></section><section id="page-zone1" class="page standard-page-pad"><div style="margin-bottom: 12px;"><button class="btn btn-secondary" onclick="app.nav('page-map')">⬅ Kembali ke Peta</button></div><h2>Zona 1: Kedatangan Bangsa Asing ke Nusantara</h2><div class="interactive-scene-container"><img src="bangsaasing.png" alt="Bangsa Asing" onerror="this.onerror=null; this.src='https://placehold.co/900x500/D4C3A3/3E2723?text=Kedatangan+Bangsa+Asing';"><div class="scene-hotspot" style="top: 45%; left: 19%; width: 15%; height: 12%; border-radius: 15%; transform: translate(-50%, -50%);" onclick="app.openDetail('zone1', 'portugis')" role="button" tabindex="0" aria-label="Buka materi portugis" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"></div><div class="scene-hotspot" style="top: 45%; left: 62%; width: 15%; height: 12%; border-radius: 15%; transform: translate(-50%, -50%);" onclick="app.openDetail('zone1', 'spanyol')" role="button" tabindex="0" aria-label="Buka materi spanyol" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"></div><div class="scene-hotspot" style="top: 61%; left: 39%; width: 15%; height: 12%; border-radius: 15%; transform: translate(-50%, -50%);" onclick="app.openDetail('zone1', 'belanda')" role="button" tabindex="0" aria-label="Buka materi belanda" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"></div><div class="scene-hotspot" style="top: 61%; left: 75%; width: 15%; height: 12%; border-radius: 15%; transform: translate(-50%, -50%);" onclick="app.openDetail('zone1', 'inggris')" role="button" tabindex="0" aria-label="Buka materi inggris" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"></div></div><div id="zone-quiz-1" class="zone-quiz-shell"></div><div class="demo-note"><strong>Ingin melanjutkan perjalanan?</strong><p>Zona 2–7, tantangan, evaluasi akhir, dan sertifikat tersedia di versi premium.</p><button class="btn" onclick="app.openUpgrade()">Lihat Premium</button></div></section><section id="page-profil" class="page standard-page-pad"><div style="margin-bottom: 15px;"><button class="btn btn-secondary" onclick="app.nav('page-beranda')">⬅ Kembali ke Beranda</button></div><h2>Profil Pengembang &amp; Sumber MPI</h2><div style="max-width: 550px; margin: 0 auto 20px auto; border-radius: 16px; overflow: hidden; border: 3px solid var(--tertiary); box-shadow: 0 8px 24px rgba(0,0,0,0.25); background: #000;"><img src="Foto%20pengembang.png" alt="Profil Pengembang - Nur Dwi Yanti" style="width: 100%; height: auto; display: block; object-fit: contain;" onerror="this.onerror=null; this.src='https://placehold.co/600x900/CE1126/FFFFFF?text=Foto+Pengembang';"></div><div class="card" style="max-width: 650px; margin: 0 auto 20px auto; text-align: left;"><h3>👩‍💻 Profil &amp; Media Sosial Pengembang</h3><p><strong>Nama Pengembang:</strong> Nur Dwi Yanti</p><ul style="margin-left: 20px; font-size: 0.95rem; line-height: 1.8;"><li>📺 <strong>YouTube:</strong><a href="https://www.youtube.com/@yanti_NDY" target="_blank" style="color: var(--primary); text-decoration: underline;">@yanti_NDY</a></li><li>📸 <strong>Instagram 1:</strong><a href="https://www.instagram.com/dyanti.dwisyafa/" target="_blank" style="color: var(--primary); text-decoration: underline;">@dyanti.dwisyafa</a></li><li>📸 <strong>Instagram 2:</strong><a href="https://www.instagram.com/mamasyafasawasaid/" target="_blank" style="color: var(--primary); text-decoration: underline;">@mamasyafasawasaid</a></li><li>📧 <strong>Email:</strong><a href="mailto:langitilmuedu@gmail.com" style="color: var(--primary); text-decoration: underline;">langitilmuedu@gmail.com</a></li><li>🌐 <strong>Portal Media:</strong><a href="https://langitilmuedu.id" target="_blank" style="color: var(--primary); text-decoration: underline;">langitilmuedu.id</a></li></ul></div><div class="card" style="max-width: 650px; margin: 0 auto;"><h3>📚 Sumber Aset &amp; Materi Pembuatan MPI</h3><ul style="text-align: left; margin-left: 20px; font-size: 0.95rem; line-height: 1.7;"><li><strong>Materi Pembelajaran:</strong> Buku Guru dan Buku Siswa IPAS / Sejarah Kelas VI Kurikulum Merdeka (Kemendikbudristek RI).</li><li><strong>Aset Visual &amp; Gambar:</strong> `videoopening.mp4`, `videopembelajaran.mp4`, `backgrounddepan.png`, `beranda_4.png`, `peta.png`, `bangsaasing.png`, `perlawanan_2.png`, `belanda.png`, `jepang.png`, `kebangkitannasional.png`, `sebelumproklamasi.png`, `kemerdekaan.png`, `backgroundarcade.png`, `garuda.png`, `Foto pengembang.png`, `jigsaw.png`.</li><li><strong>Aset Audio:</strong> `harimerdeka.mp3` &amp; `maju.mp3`.</li><li><strong>Teknologi:</strong> HTML5, CSS3, dan Vanilla JavaScript Responsif, Suno, Canvas.</li></ul></div></section></main></div><div class="modal" id="app-modal"><div class="modal-content"><h2 id="modal-title" style="color: var(--primary); margin-bottom: 10px;">Judul</h2><div id="modal-body" style="font-size: 1rem; color: var(--text-dark); margin-bottom: 20px; text-align: left;"></div><div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;"><button id="narrator-button" class="btn btn-success" aria-pressed="false" onclick="app.speakCurrentModal()">🔊 Dengar Suara</button><button class="btn" onclick="app.closeModal()">Tutup</button></div></div></div><div id="copyright-protection-mark" aria-label="Pemberitahuan hak cipta">© 2026 Nur Dwi Yanti, M.Pd. • Seluruh Hak Dilindungi</div><style>#copyright-protection-mark{position:fixed;right:8px;bottom:5px;z-index:10000;max-width:calc(100vw - 16px);padding:3px 7px;border-radius:8px;background:rgba(3,15,30,0.72);color:rgba(255,255,255,0.72);border:1px solid rgba(0,243,255,0.25);font:600 10px/1.2 Arial,sans-serif;pointer-events:none;user-select:none}@media (max-width:480px){#copyright-protection-mark{font-size:8px;opacity:0.72}}@media print{#copyright-protection-mark{display:none}}</style><script>
+// Penyimpanan progres dipisahkan antara demo dan premium.
+const mpiStorage = (() => {
+  const fallback = new Map(); let warned = false;
+  function warn(){ if(warned)return; warned=true; const n=document.createElement('div'); n.textContent='Penyimpanan browser diblokir. Progres hanya tersimpan selama halaman ini terbuka.'; n.style.cssText='padding:10px;background:#fff3cd;color:#503900;text-align:center;font:14px Arial;'; document.body.prepend(n); }
+  return {
+    getItem(k){try{return localStorage.getItem(k);}catch(e){warn();return fallback.get(k)||null;}},
+    setItem(k,v){fallback.set(k,String(v));try{localStorage.setItem(k,String(v));}catch(e){warn();}},
+    removeItem(k){fallback.delete(k);try{localStorage.removeItem(k);}catch(e){warn();}}
+  };
+})();
+
+    const bgmAudio = new Audio('harimerdeka.mp3');
+    bgmAudio.loop = true;
+    bgmAudio.volume = 0.5;
+
+    const sfxAudio = new Audio('maju.mp3');
+    sfxAudio.volume = 0.5;
+
+    let userTargetVolume = 0.5;
+    let speechTimeoutId = null;
+    let narrationSessionId = 0;
+    let isNarrationActive = false;
+    let preferredNarratorVoice = null;
+    let wasBgmPlayingBeforeVideo = false;
+
+    function refreshNarratorVoice() {
+        if (!('speechSynthesis' in window)) return null;
+        const voices = window.speechSynthesis.getVoices() || [];
+        const indonesianVoices = voices.filter(voice =>
+            /^id(?:-|_)/i.test(voice.lang || '') || /indonesia/i.test(voice.name || '')
+        );
+        preferredNarratorVoice = indonesianVoices.find(voice =>
+            /google|microsoft|natural|online/i.test(voice.name || '')
+        ) || indonesianVoices[0] || null;
+        return preferredNarratorVoice;
+    }
+
+    function updateNarratorButton(isActive) {
+        const button = document.getElementById('narrator-button');
+        if (!button) return;
+        button.innerText = isActive ? '⏹ Hentikan Narasi' : '🔊 Dengar Suara';
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    }
+
+    function prepareNarrationText(title, html) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html || '';
+
+        tempDiv.querySelectorAll('script, style, button').forEach(element => element.remove());
+        tempDiv.querySelectorAll('br').forEach(element => {
+            element.replaceWith(document.createTextNode('. '));
+        });
+        tempDiv.querySelectorAll('p, li, h1, h2, h3, h4, tr').forEach(element => {
+            element.appendChild(document.createTextNode('. '));
+        });
+
+        let text = `${title || ''}. ${tempDiv.textContent || ''}`;
+        text = text
+            .replace(/[\p{Extended_Pictographic}\uFE0F]/gu, ' ')
+            .replace(/\bW\.?\s*R\.?/gi, 'W R')
+            .replace(/\bs\.?\s*d\.?\b/gi, 'sampai dengan')
+            .replace(/\bM\.Pd\./g, 'Magister Pendidikan')
+            .replace(/\bS\.Pd\./g, 'Sarjana Pendidikan')
+            .replace(/\bDr\./g, 'Doktor')
+            .replace(/(\d{4})\s*[–—-]\s*(\d{4})/g, '$1 sampai $2')
+            .replace(/\bke-(\d+)\b/gi, 'ke $1')
+            .replace(/[`*_#]/g, ' ')
+            .replace(/\s*\.\s*\.\s*/g, '. ')
+            .replace(/\s+/g, ' ')
+            .trim();
+        return text;
+    }
+
+    function splitNarrationText(text, maxLength = 190) {
+        const sentences = (text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [])
+            .map(sentence => sentence.trim())
+            .filter(Boolean);
+        const chunks = [];
+
+        sentences.forEach(sentence => {
+            if (sentence.length <= maxLength) {
+                chunks.push(sentence);
+                return;
+            }
+
+            const parts = sentence.split(/(?<=[,;:])\s+/);
+            let current = '';
+            parts.forEach(part => {
+                const candidate = current ? `${current} ${part}` : part;
+                if (candidate.length > maxLength && current) {
+                    chunks.push(current.trim());
+                    current = part;
+                } else {
+                    current = candidate;
+                }
+            });
+            if (current.trim()) chunks.push(current.trim());
+        });
+
+        return chunks;
+    }
+
+    if ('speechSynthesis' in window) {
+        refreshNarratorVoice();
+        if (window.speechSynthesis.addEventListener) {
+            window.speechSynthesis.addEventListener('voiceschanged', refreshNarratorVoice);
+        }
+    }
+
+    const appAudio = {
+        isPlaying: false,
+
+        toggleAudio() {
+            if (this.isPlaying) {
+                bgmAudio.pause();
+                this.isPlaying = false;
+                document.getElementById('audio-status').innerText = "BGM: Off";
+            } else {
+                bgmAudio.play().then(() => {
+                    this.isPlaying = true;
+                    document.getElementById('audio-status').innerText = "BGM: On";
+                }).catch(e => {
+                    app.showModal("Info Audio", "File `harimerdeka.mp3` belum tersedia.");
+                });
+            }
+        },
+
+        startBgmAutomatically() {
+            if(!this.isPlaying) {
+                bgmAudio.play().then(() => {
+                    this.isPlaying = true;
+                    document.getElementById('audio-status').innerText = "BGM: On";
+                }).catch(e => {
+                    console.log("Auto-play BGM blocked until user interaction.");
+                });
+            }
+        },
+
+        stopBgm() {
+            bgmAudio.pause();
+            this.isPlaying = false;
+            const statusEl = document.getElementById('audio-status');
+            if(statusEl) statusEl.innerText = "BGM: Off";
+        },
+
+        setVolume(val) {
+            userTargetVolume = parseFloat(val);
+            bgmAudio.volume = userTargetVolume;
+            sfxAudio.volume = userTargetVolume;
+        },
+
+        lowerVolumeForSpeech() {
+            if (this.isPlaying) {
+                bgmAudio.volume = Math.min(userTargetVolume, 0.1);
+            }
+        },
+
+        restoreVolumeAfterSpeech() {
+            if (this.isPlaying) {
+                bgmAudio.volume = userTargetVolume;
+            }
+        },
+
+        playSfx() {
+            sfxAudio.currentTime = 0;
+            sfxAudio.play().catch(e => {});
+        }
+    };
+
+    const garudaMascot = document.getElementById('draggable-garuda');
+    let isDragging = false;
+    let startX, startY, initialX, initialY;
+
+    if(garudaMascot) {
+        const dragStart = (e) => {
+            isDragging = true;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            startX = clientX;
+            startY = clientY;
+            const rect = garudaMascot.getBoundingClientRect();
+            initialX = rect.left;
+            initialY = rect.top;
+            garudaMascot.style.bottom = 'auto';
+            garudaMascot.style.left = initialX + 'px';
+            garudaMascot.style.top = initialY + 'px';
+            e.preventDefault();
+        };
+
+        const dragMove = (e) => {
+            if(!isDragging) return;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const dx = clientX - startX;
+            const dy = clientY - startY;
+            garudaMascot.style.left = (initialX + dx) + 'px';
+            garudaMascot.style.top = (initialY + dy) + 'px';
+        };
+
+        const dragEnd = () => { isDragging = false; };
+
+        garudaMascot.addEventListener('mousedown', dragStart);
+        window.addEventListener('mousemove', dragMove);
+        window.addEventListener('mouseup', dragEnd);
+
+        garudaMascot.addEventListener('touchstart', dragStart, {passive: false});
+        window.addEventListener('touchmove', dragMove, {passive: false});
+        window.addEventListener('touchend', dragEnd);
+    }
+
+    const databaseDetails = {"zone1": {"portugis": {"title": "🇵🇹 Bangsa Portugis", "text": "<strong>Tahun Kedatangan:</strong> 1511. <br><strong>Tokoh Utama:</strong> Alfonso de Albuquerque.<br><strong>Tujuan Utama:</strong> Menguasai perdagangan rempah-rempah (Gold), menyebarkan agama Katolik (Gospel), dan memperluas kejayaan wilayah (Glory).<br><strong>Peristiwa Penting:</strong> Berhasil menaklukkan Kesultanan Malaka pada tahun 1511, kemudian melanjutkan perjalanan ke Maluku untuk menguasai perdagangan cengkeh dan pala.<br><br><strong>Penjelasan Materi Pembelajaran:</strong><br>Bangsa Portugis adalah bangsa Eropa pertama yang mendarat di Nusantara. Kedatangan mereka didorong oleh jatuhnya kota Konstantinopel ke tangan Kesultanan Utsmaniyah pada tahun 1453, yang membuat jalur perdagangan rempah-rempah darat ke Eropa terputus. Penaklukan Malaka oleh Alfonso de Albuquerque mengubah peta perdagangan di Asia Tenggara dan memicu perlawanan dari kerajaan-kerajaan lokal di Nusantara."}, "spanyol": {"title": "🇪🇸 Bangsa Spanyol", "text": "<strong>Tahun Kedatangan:</strong> 1521. <br><strong>Tokoh Utama:</strong> Juan Sebastián Elcano (Ekspedisi Ferdinand Magellan).<br><strong>Tujuan Utama:</strong> Mencari jalur rempah-rempah baru melalui arah barat.<br><strong>Peristiwa Penting:</strong> Tiba di Tidore, Maluku pada tahun 1521 dan menjalin kerja sama dengan Kesultanan Tidore.<br><br><strong>Penjelasan Materi Pembelajaran:</strong><br>Kedatangan Spanyol di Maluku menimbulkan konflik intensif dengan Portugis yang telah terlebih dahulu berada di Ternate. Konflik perebutan monopoli rempah-rempah ini akhirnya diselesaikan melalui <em>Perjanjian Saragosa (1529)</em>, yang menetapkan bahwa Spanyol harus meninggalkan Maluku dan memusatkan kekuasaannya di Filipina, sementara Portugis tetap berkuasa di Maluku."}, "belanda": {"title": "🇳🇱 Bangsa Belanda", "text": "<strong>Tahun Kedatangan:</strong> 1596. <br><strong>Tokoh Utama:</strong> Cornelis de Houtman.<br><strong>Tujuan Utama:</strong> Memonopoli perdagangan rempah-rempah dan mendirikan pusat perdagangan.<br><strong>Peristiwa Penting:</strong> Rombongan mendarat di Banten pada tahun 1596. Kemudian dibentuklah perkumpulan kongsi dagang VOC (<em>Vereenigde Oostindische Compagnie</em>) pada tahun 1602.<br><br><strong>Penjelasan Materi Pembelajaran:</strong><br>Awalnya kedatangan Cornelis de Houtman ditolak oleh masyarakat Banten karena sikapnya yang kasar dan arogan. Namun, ekspedisi berikutnya berhasil membangun hubungan dagang hingga Belanda mendirikan VOC. VOC diberi hak istimewa (<em>Hak Octrooien</em>) oleh pemerintah Belanda, seperti hak mencetak uang sendiri, membentuk tentara, dan menyatakan perang, yang menjadi cikal bakal penjajahan panjang di Indonesia."}, "inggris": {"title": "🇬🇧 Bangsa Inggris", "text": "<strong>Tahun Kedatangan:</strong> Abad ke-19 (1811-1816).<br><strong>Tokoh Utama:</strong> Thomas Stamford Raffles.<br><strong>Tujuan Utama:</strong> Menguasai wilayah strategis kolonial dan menanamkan pengaruh perdagangan di Asia.<br><strong>Peristiwa Penting:</strong> Merebut Pulau Jawa dari Belanda-Prancis dan memerintah secara singkat dari tahun 1811 hingga 1816.<br><br><strong>Penjelasan Materi Pembelajaran:</strong><br>Masa pemerintahan Raffles membawa perubahan penting di Hindia Belanda. Ia menerapkan sistem sewa tanah (<em>Landrent System</em>), menghapuskan kerja rodi secara formal, membagi Pulau Jawa menjadi 16 karesidenan, serta menulis buku sejarah terkenal <em>History of Java</em> dan merintis berdirinya Kebun Raya Bogor."}}};
+    const zoneQuizData = {"1": {"title": "Kedatangan Bangsa Asing", "questions": [{"type": "single", "prompt": "Bangsa Eropa yang pertama kali mendarat dan membangun pengaruh di Nusantara adalah...", "options": ["Portugis", "Spanyol", "Belanda", "Inggris"], "answer": 0, "explanation": "Portugis menjadi bangsa Eropa pertama yang tiba setelah menaklukkan Malaka pada 1511."}, {"type": "boolean", "prompt": "Spanyol tiba di Tidore pada 1521 dan bekerja sama dengan Kesultanan Tidore.", "answer": true, "explanation": "Pernyataan benar. Spanyol menjalin kerja sama dengan Kesultanan Tidore."}, {"type": "multi", "prompt": "Pilih semua tujuan penjelajahan samudra yang termasuk semboyan 3G.", "options": ["Gold", "Glory", "Gospel", "Democracy"], "answer": [0, 1, 2], "explanation": "3G berarti Gold, Glory, dan Gospel."}, {"type": "match", "prompt": "Pasangkan bangsa Eropa dengan tahun kedatangannya.", "pairs": [{"left": "Portugis", "right": "1511"}, {"left": "Spanyol", "right": "1521"}, {"left": "Belanda", "right": "1596"}, {"left": "Inggris berkuasa di Jawa", "right": "1811"}], "choices": ["1511", "1521", "1596", "1811"], "explanation": "Urutannya adalah Portugis 1511, Spanyol 1521, Belanda 1596, dan Inggris 1811."}, {"type": "order", "prompt": "Tentukan urutan peristiwa dari yang paling awal hingga paling akhir.", "items": [{"label": "Belanda tiba di Banten (1596)", "order": 3}, {"label": "Portugis menaklukkan Malaka (1511)", "order": 1}, {"label": "Inggris memerintah Jawa (1811)", "order": 4}, {"label": "Spanyol tiba di Tidore (1521)", "order": 2}], "explanation": "Urutan waktunya: 1511, 1521, 1596, lalu 1811."}]}};
+    const zoneQuestionTypeLabels = {
+        single: "Pilihan Ganda",
+        boolean: "Benar–Salah",
+        multi: "Pilihan Jamak",
+        match: "Menjodohkan",
+        order: "Mengurutkan"
+    };
+
+    function escapeQuizText(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+
+    const app = {
+        data: { name: "Nur Dwi Yanti", progress: 0, evalScore: null, visitedZones: [], zoneQuizScores: {}, mapVideoCompleted: false },
+        currentModalText: "",
+        garudaVisible: true,
+
+        init() {
+            const saved=mpiStorage.getItem('mpi_sejarah_demo_v1');
+            if(saved){try{
+                const data=JSON.parse(saved);
+                if(typeof data.name==='string') this.data.name=data.name;
+                this.data.visitedZones=Array.isArray(data.visitedZones)&&data.visitedZones.includes(1)?[1]:[];
+                this.data.zoneQuizScores=data.zoneQuizScores&&data.zoneQuizScores[1]?{1:data.zoneQuizScores[1]}:{};
+            }catch(e){}}
+            document.getElementById('input-nama').value=this.data.name==='Nur Dwi Yanti'?'':this.data.name;
+            document.getElementById('header-student').innerText='Penjelajah: '+(this.data.name==='Nur Dwi Yanti'?'Tamu':this.data.name);
+            this.renderZoneQuizzes();this.updateProgress();this.playOpeningVideo();
+        },
+
+        playOpeningVideo() {
+            const openingVid = document.getElementById('opening-video');
+            if(!openingVid) return;
+
+            openingVid.onended = () => {
+                this.finishOpening();
+            };
+
+            openingVid.onerror = () => {
+                this.handleVideoError();
+            };
+
+            openingVid.currentTime = 0;
+            openingVid.muted = true;
+
+            openingVid.play().then(() => {
+                setTimeout(() => {
+                    openingVid.muted = false;
+                }, 300);
+            }).catch(err => {
+                console.log("Autoplay opening restricted:", err);
+            });
+        },
+
+        handleVideoError() {
+            setTimeout(() => {
+                this.finishOpening();
+            }, 1000);
+        },
+
+        finishOpening() {
+            appAudio.playSfx();
+            const openingVid = document.getElementById('opening-video');
+            if(openingVid) {
+                openingVid.onended = null;
+                openingVid.onerror = null;
+                openingVid.pause();
+                openingVid.currentTime = 0;
+            }
+            this.nav('page-welcome');
+            this.garudaVisible = true;
+            const garuda = document.getElementById('draggable-garuda');
+            if(garuda) garuda.style.display = 'block';
+        },
+
+        save() {
+            mpiStorage.setItem('mpi_sejarah_demo_v1', JSON.stringify(this.data));
+            this.updateProgress();
+        },
+
+        startApp() {
+            appAudio.playSfx();
+            appAudio.startBgmAutomatically();
+            const name = document.getElementById('input-nama').value.trim() || "Penjelajah Demo";
+            this.data.name = name;
+            this.data.progress = Math.max(this.data.progress, 15);
+            this.save();
+            document.getElementById('header-student').innerText = `Penjelajah: ${name}`;
+            this.nav('page-beranda');
+        },
+
+        nav(pageId) {
+            const allowed=['page-opening','page-welcome','page-beranda','page-map-video','page-map','page-zone1','page-profil'];
+            if(!allowed.includes(pageId)){this.openUpgrade();return;}
+            appAudio.playSfx();this.stopSpeech();
+            ['opening-video','map-learning-video'].forEach(id=>{const v=document.getElementById(id);if(v && !v.closest('#'+pageId)) v.pause();});
+            document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');window.scrollTo(0,0);
+            if(pageId==='page-beranda')appAudio.startBgmAutomatically();
+        },
+        updateProgress() {
+            const done=!!this.data.zoneQuizScores?.[1];
+            const visited=(this.data.visitedZones||[]).includes(1);
+            const pct=done?100:visited?50:0;
+            this.data.progress=pct;
+            document.getElementById('progress-bar').style.width=pct+'%';
+            document.getElementById('progress-text').innerText='Progres demo: '+pct+'%';
+        },
+
+        toggleGaruda() {
+            appAudio.playSfx();
+            const m = document.getElementById('draggable-garuda');
+            const stat = document.getElementById('garuda-status');
+            this.garudaVisible = !this.garudaVisible;
+            if(this.garudaVisible) {
+                m.style.display = 'block';
+                if(stat) stat.innerText = "Garuda: On";
+            } else {
+                m.style.display = 'none';
+                if(stat) stat.innerText = "Garuda: Off";
+            }
+        },
+
+        openMapJourney() { this.nav('page-map'); },
+        skipDemoVideo() {
+            const v=document.getElementById('map-learning-video');if(v)v.pause();this.nav('page-map');
+        },
+
+        playMapLearningVideo() {
+            const video = document.getElementById('map-learning-video');
+            const status = document.getElementById('map-video-status');
+            const fallbackButton = document.getElementById('map-video-play-fallback');
+            const progressFill = document.getElementById('map-video-progress-fill');
+            if(!video) return;
+
+            wasBgmPlayingBeforeVideo = appAudio.isPlaying;
+            appAudio.stopBgm();
+            video.pause();
+            video.currentTime = 0;
+            video.muted = false;
+            if(progressFill) progressFill.style.width = '0%';
+            if(fallbackButton) {
+                fallbackButton.style.display = 'none';
+                fallbackButton.textContent = '▶ Mulai Video';
+            }
+            if(status) status.textContent = '▶ Video diputar otomatis. Tonton sampai selesai untuk membuka peta.';
+
+            const playPromise = video.play();
+            if(playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {
+                    if(status) status.textContent = '🔊 Browser memerlukan satu klik untuk memulai video dengan suara.';
+                    if(fallbackButton) fallbackButton.style.display = 'inline-block';
+                });
+            }
+        },
+
+        resumeMapLearningVideo() {
+            const video = document.getElementById('map-learning-video');
+            const status = document.getElementById('map-video-status');
+            const fallbackButton = document.getElementById('map-video-play-fallback');
+            if(!video) return;
+
+            if(video.error) video.load();
+            video.muted = false;
+            const playPromise = video.play();
+            if(playPromise && typeof playPromise.then === 'function') {
+                playPromise.then(() => {
+                    if(status) status.textContent = '▶ Video sedang diputar. Peta terbuka otomatis setelah selesai.';
+                    if(fallbackButton) fallbackButton.style.display = 'none';
+                }).catch(() => {
+                    if(status) status.textContent = '⚠️ Video belum dapat diputar. Pastikan file videopembelajaran.mp4 tersedia.';
+                    if(fallbackButton) {
+                        fallbackButton.style.display = 'inline-block';
+                        fallbackButton.textContent = '🔄 Coba Muat Video';
+                    }
+                });
+            }
+        },
+
+        updateMapVideoProgress() {
+            const video = document.getElementById('map-learning-video');
+            const progressFill = document.getElementById('map-video-progress-fill');
+            if(!video || !progressFill || !Number.isFinite(video.duration) || video.duration <= 0) return;
+            const percentage = Math.min(100, Math.max(0, (video.currentTime / video.duration) * 100));
+            progressFill.style.width = `${percentage}%`;
+        },
+
+        completeMapLearningVideo() {
+            const status = document.getElementById('map-video-status');
+            const progressFill = document.getElementById('map-video-progress-fill');
+            const fallbackButton = document.getElementById('map-video-play-fallback');
+            this.data.mapVideoCompleted = true;
+            this.save();
+
+            if(progressFill) progressFill.style.width = '100%';
+            if(fallbackButton) fallbackButton.style.display = 'none';
+            if(status) status.textContent = '✅ Video selesai. Membuka Peta Perjalanan Indonesia...';
+            if(wasBgmPlayingBeforeVideo) appAudio.startBgmAutomatically();
+
+            setTimeout(() => this.nav('page-map'), 600);
+        },
+
+        handleMapLearningVideoError() {
+            const status = document.getElementById('map-video-status');
+            const fallbackButton = document.getElementById('map-video-play-fallback');
+            if(status) status.textContent = '⚠️ Video tidak ditemukan. Pastikan videopembelajaran.mp4 berada satu folder dengan index.html.';
+            if(fallbackButton) {
+                fallbackButton.style.display = 'inline-block';
+                fallbackButton.textContent = '🔄 Coba Muat Video';
+            }
+        },
+
+        cancelMapLearningVideo() {
+            const video = document.getElementById('map-learning-video');
+            if(video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+            if(wasBgmPlayingBeforeVideo) appAudio.startBgmAutomatically();
+            this.nav('page-beranda');
+        },
+
+        openPetunjuk() {
+            this.showModal('Petunjuk Versi Demo','<p>1. Buka Peta Perjalanan dan pilih Zona 1.</p><p>2. Ketuk titik materi Portugis, Spanyol, Belanda, dan Inggris.</p><p>3. Kerjakan 5 soal latihan Zona 1. Menu Skor menampilkan hasil demo.</p><p>4. Zona 2–7, arcade, evaluasi akhir, refleksi, dan sertifikat tersedia pada premium.</p><p>Progres demo 100% berarti latihan demo sudah dikerjakan, bukan seluruh MPI telah dituntaskan.</p>');
+        },
+
+        openCPTP() {
+            appAudio.playSfx();
+            this.showModal("📜 CP dan TP", "<strong>Capaian Pembelajaran:</strong> Peserta didik memahami kronologi sejarah perjuangan bangsa Indonesia dalam melawan penjajahan serta proses perumusan kemerdekaan Indonesia.");
+        },
+
+        escapeHtml(value) {
+            const el = document.createElement('div');
+            el.textContent = String(value ?? '');
+            return el.innerHTML;
+        },
+
+        openSkorCapaian() {
+            const score=this.data.zoneQuizScores?.[1];
+            const text=score ? `Skor terbaik latihan Zona 1: <strong>${Number(score.score)||0} / 5</strong>.` : 'Latihan Zona 1 belum dikerjakan.';
+            this.showModal('Hasil Latihan Demo',text+'<p>Hasil ini hanya untuk demo, bukan nilai akhir atau sertifikat premium.</p><button class="btn" onclick="app.openUpgrade()">Lihat Fitur Premium</button>');
+        },
+        openUpgrade() {
+            this.showModal('🔐 Lanjutkan di Premium', '<p>Demo membuka Zona 1 dan 5 soal latihannya. Premium menyediakan 7 zona, 35 soal latihan zona, arcade, 20 soal evaluasi akhir, refleksi, dan sertifikat.</p><p>Setelah aktivasi, menu akhir terbuka setelah seluruh zona dijelajahi sesuai alur pembelajaran.</p><button class="btn" onclick="MPIBukaPremium()">Saya Punya Lisensi</button> <button class="btn btn-secondary" onclick="app.closeModal()">Lanjut Demo</button>');
+        },
+
+        resetAppProgress() {
+            appAudio.playSfx();
+            this.showModal("Konfirmasi Reset", "Reset progres penjelajah dan kembali ke video opening?<br><br><button class='btn btn-success' onclick='app.confirmReset(true)'>Ya, Reset</button> <button class='btn btn-secondary' onclick='app.closeModal()'>Batal</button>");
+        },
+
+        confirmReset(confirmed) {
+            if(confirmed) {
+                appAudio.stopBgm();
+                mpiStorage.removeItem('mpi_sejarah_demo_v1');
+                this.data = { name: "Nur Dwi Yanti", progress: 0, evalScore: null, visitedZones: [], zoneQuizScores: {}, mapVideoCompleted: false };
+                this.renderZoneQuizzes();
+                this.updateProgress();
+                this.closeModal();
+                
+                const garuda = document.getElementById('draggable-garuda');
+                if(garuda) garuda.style.display = 'none';
+                
+                this.nav('page-opening');
+                this.playOpeningVideo();
+            }
+        },
+
+        openZone(zoneNum) {
+            if(Number(zoneNum)!==1){this.openUpgrade();return;}
+            this.data.visitedZones=[1];this.nav('page-zone1');this.save();
+        },
+        openDetail(zoneKey,itemKey) {
+            if(zoneKey!=='zone1'){this.openUpgrade();return;}
+            const item=databaseDetails.zone1[itemKey];if(item)this.showModal(item.title,item.text);
+        },
+
+        showModal(title, html) {
+            this.stopSpeech();
+            this.currentModalText = html;
+            document.getElementById('modal-title').innerHTML = title;
+            document.getElementById('modal-body').innerHTML = html;
+            document.getElementById('app-modal').style.display = 'flex';
+        },
+
+        closeModal() {
+            this.stopSpeech();
+            document.getElementById('app-modal').style.display = 'none';
+        },
+
+        speakCurrentModal() {
+            if (!('speechSynthesis' in window)) {
+                alert("Maaf, browser Anda tidak mendukung fitur Voice Over.");
+                return;
+            }
+            if (isNarrationActive) {
+                this.stopSpeech();
+                return;
+            }
+
+            this.stopSpeech();
+            refreshNarratorVoice();
+
+            const title = document.getElementById('modal-title').innerText;
+            const fullText = prepareNarrationText(title, this.currentModalText);
+            const narrationChunks = splitNarrationText(fullText);
+            if (!narrationChunks.length) return;
+
+            const currentSession = ++narrationSessionId;
+            let index = 0;
+            isNarrationActive = true;
+            updateNarratorButton(true);
+            appAudio.lowerVolumeForSpeech();
+
+            const finishNarration = () => {
+                if (currentSession !== narrationSessionId) return;
+                speechTimeoutId = null;
+                isNarrationActive = false;
+                updateNarratorButton(false);
+                appAudio.restoreVolumeAfterSpeech();
+            };
+
+            const speakNextChunk = () => {
+                if (currentSession !== narrationSessionId) return;
+                if (index >= narrationChunks.length) {
+                    finishNarration();
+                    return;
+                }
+
+                const utterance = new SpeechSynthesisUtterance(narrationChunks[index]);
+                utterance.lang = 'id-ID';
+                if (preferredNarratorVoice) utterance.voice = preferredNarratorVoice;
+                utterance.rate = 0.88;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+
+                utterance.onend = () => {
+                    if (currentSession !== narrationSessionId) return;
+                    index++;
+                    speechTimeoutId = setTimeout(speakNextChunk, 280);
+                };
+
+                utterance.onerror = () => finishNarration();
+                window.speechSynthesis.speak(utterance);
+            };
+
+            speakNextChunk();
+        },
+
+        stopSpeech() {
+            narrationSessionId++;
+            if (speechTimeoutId) {
+                clearTimeout(speechTimeoutId);
+                speechTimeoutId = null;
+            }
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            isNarrationActive = false;
+            updateNarratorButton(false);
+            appAudio.restoreVolumeAfterSpeech();
+        },
+
+
+        renderZoneQuizzes() {
+            Object.keys(zoneQuizData).forEach(zoneNum => this.renderZoneQuiz(Number(zoneNum)));
+        },
+
+        renderZoneQuiz(zoneNum) {
+            const zone = zoneQuizData[zoneNum];
+            const container = document.getElementById(`zone-quiz-${zoneNum}`);
+            if(!zone || !container) return;
+
+            const savedScore = this.data.zoneQuizScores?.[zoneNum]?.score;
+            const scoreText = Number.isFinite(Number(savedScore))
+                ? `Skor terbaik: ${savedScore} / 5`
+                : "Belum dikerjakan";
+
+            let html = `
+                <div class="zone-quiz-header">
+                    <div>
+                        <h3>📝 Latihan Zona ${zoneNum}: ${escapeQuizText(zone.title)}</h3>
+                        <p>Jawab 5 soal dengan 5 bentuk berbeda setelah mempelajari titik materi di atas.</p>
+                    </div>
+                    <span class="zone-score-badge" id="zone-score-badge-${zoneNum}">${scoreText}</span>
+                </div>
+            `;
+
+            zone.questions.forEach((question, questionIndex) => {
+                const questionNumber = questionIndex + 1;
+                const inputName = `zone_${zoneNum}_question_${questionIndex}`;
+                html += `
+                    <div class="zone-question" id="zone-${zoneNum}-question-${questionIndex}">
+                        <div class="zone-question-title">
+                            <span class="zone-question-type">${escapeQuizText(zoneQuestionTypeLabels[question.type])}</span>
+                            ${questionNumber}. ${escapeQuizText(question.prompt)}
+                        </div>
+                `;
+
+                if(question.type === "single") {
+                    question.options.forEach((option, optionIndex) => {
+                        html += `<label class="zone-option"><input type="radio" name="${inputName}" value="${optionIndex}"> ${escapeQuizText(option)}</label>`;
+                    });
+                } else if(question.type === "boolean") {
+                    html += `<label class="zone-option"><input type="radio" name="${inputName}" value="true"> Benar</label>`;
+                    html += `<label class="zone-option"><input type="radio" name="${inputName}" value="false"> Salah</label>`;
+                } else if(question.type === "multi") {
+                    question.options.forEach((option, optionIndex) => {
+                        html += `<label class="zone-option"><input type="checkbox" name="${inputName}" value="${optionIndex}"> ${escapeQuizText(option)}</label>`;
+                    });
+                } else if(question.type === "match") {
+                    question.pairs.forEach((pair, pairIndex) => {
+                        html += `<div class="zone-match-row"><strong>${escapeQuizText(pair.left)}</strong><select data-match-index="${pairIndex}" aria-label="Pasangan untuk ${escapeQuizText(pair.left)}"><option value="">Pilih pasangan...</option>`;
+                        question.choices.forEach(choice => {
+                            html += `<option value="${escapeQuizText(choice)}">${escapeQuizText(choice)}</option>`;
+                        });
+                        html += `</select></div>`;
+                    });
+                } else if(question.type === "order") {
+                    question.items.forEach((item, itemIndex) => {
+                        html += `<div class="zone-order-row"><span>${escapeQuizText(item.label)}</span><select data-order-index="${itemIndex}" aria-label="Urutan untuk ${escapeQuizText(item.label)}"><option value="">Pilih urutan...</option>`;
+                        for(let orderNumber = 1; orderNumber <= question.items.length; orderNumber++) {
+                            html += `<option value="${orderNumber}">Urutan ke-${orderNumber}</option>`;
+                        }
+                        html += `</select></div>`;
+                    });
+                }
+
+                html += `<div class="zone-answer-feedback" id="zone-${zoneNum}-feedback-${questionIndex}" aria-live="polite"></div></div>`;
+            });
+
+            html += `
+                <div class="zone-quiz-actions">
+                    <button class="btn btn-success" type="button" onclick="app.submitZoneQuiz(${zoneNum})">Periksa Jawaban ✅</button>
+                    <button class="btn btn-secondary" type="button" onclick="app.resetZoneQuiz(${zoneNum})">Bersihkan Jawaban 🔄</button>
+                </div>
+                <div class="zone-quiz-result" id="zone-quiz-result-${zoneNum}" aria-live="polite"></div>
+            `;
+
+            container.innerHTML = html;
+        },
+
+        submitZoneQuiz(zoneNum) {
+            appAudio.playSfx();
+            const zone = zoneQuizData[zoneNum];
+            const container = document.getElementById(`zone-quiz-${zoneNum}`);
+            if(!zone || !container) return;
+
+            let score = 0;
+            zone.questions.forEach((question, questionIndex) => {
+                const questionBox = document.getElementById(`zone-${zoneNum}-question-${questionIndex}`);
+                const feedback = document.getElementById(`zone-${zoneNum}-feedback-${questionIndex}`);
+                const inputName = `zone_${zoneNum}_question_${questionIndex}`;
+                let isCorrect = false;
+
+                if(question.type === "single") {
+                    const selected = container.querySelector(`input[name="${inputName}"]:checked`);
+                    isCorrect = Boolean(selected) && Number(selected.value) === question.answer;
+                } else if(question.type === "boolean") {
+                    const selected = container.querySelector(`input[name="${inputName}"]:checked`);
+                    isCorrect = Boolean(selected) && (selected.value === "true") === question.answer;
+                } else if(question.type === "multi") {
+                    const selectedValues = [...container.querySelectorAll(`input[name="${inputName}"]:checked`)]
+                        .map(input => Number(input.value))
+                        .sort((a, b) => a - b);
+                    const correctValues = [...question.answer].sort((a, b) => a - b);
+                    isCorrect = selectedValues.length === correctValues.length && selectedValues.every((value, index) => value === correctValues[index]);
+                } else if(question.type === "match") {
+                    isCorrect = question.pairs.every((pair, pairIndex) => {
+                        const select = questionBox.querySelector(`select[data-match-index="${pairIndex}"]`);
+                        return select && select.value === pair.right;
+                    });
+                } else if(question.type === "order") {
+                    isCorrect = question.items.every((item, itemIndex) => {
+                        const select = questionBox.querySelector(`select[data-order-index="${itemIndex}"]`);
+                        return select && Number(select.value) === item.order;
+                    });
+                }
+
+                questionBox.classList.remove('is-correct', 'is-wrong');
+                questionBox.classList.add(isCorrect ? 'is-correct' : 'is-wrong');
+                feedback.textContent = `${isCorrect ? '✅ Benar!' : '❌ Belum tepat.'} ${question.explanation}`;
+                if(isCorrect) score++;
+            });
+
+            if(!this.data.zoneQuizScores) this.data.zoneQuizScores = {};
+            const previousBest = Number(this.data.zoneQuizScores[zoneNum]?.score) || 0;
+            const bestScore = Math.max(previousBest, score);
+            this.data.zoneQuizScores[zoneNum] = {
+                score: bestScore,
+                lastScore: score,
+                total: zone.questions.length,
+                completedAt: new Date().toISOString()
+            };
+            this.save();
+
+            const badge = document.getElementById(`zone-score-badge-${zoneNum}`);
+            if(badge) badge.textContent = `Skor terbaik: ${bestScore} / 5`;
+
+            const result = document.getElementById(`zone-quiz-result-${zoneNum}`);
+            if(result) {
+                const message = score === 5
+                    ? "🌟 Luar biasa! Semua jawaban benar."
+                    : score >= 3
+                        ? "👍 Bagus! Pelajari kembali jawaban yang belum tepat."
+                        : "📚 Tetap semangat! Buka kembali titik materi lalu coba lagi.";
+                result.innerHTML = `Skor percobaan ini: <strong>${score} / 5</strong><br>${message}`;
+                result.style.display = 'block';
+                result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        },
+
+        resetZoneQuiz(zoneNum) {
+            appAudio.playSfx();
+            const container = document.getElementById(`zone-quiz-${zoneNum}`);
+            if(!container) return;
+
+            container.querySelectorAll('input').forEach(input => { input.checked = false; });
+            container.querySelectorAll('select').forEach(select => { select.value = ''; });
+            container.querySelectorAll('.zone-question').forEach(question => question.classList.remove('is-correct', 'is-wrong'));
+            container.querySelectorAll('.zone-answer-feedback').forEach(feedback => { feedback.textContent = ''; });
+            const result = document.getElementById(`zone-quiz-result-${zoneNum}`);
+            if(result) {
+                result.style.display = 'none';
+                result.innerHTML = '';
+            }
+        },
+
+    };
+
+    window.onload = () => { app.init(); };
+
+
+</script></body></html>
